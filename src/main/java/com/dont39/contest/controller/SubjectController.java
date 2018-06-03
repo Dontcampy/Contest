@@ -18,10 +18,10 @@ public class SubjectController {
     private SubjectMapper subjectMapper;
 
     @RequestMapping(value = "/subject", method = RequestMethod.GET)
-    public List<SubjectEntity> subject(@RequestParam(value = "type") Integer type,
+    public List<SubjectEntity> subject(@RequestParam(value = "theme") Integer theme,
                                        @RequestParam(value = "isParty") Boolean isParty) {
 
-        return subjectMapper.getByType(isParty, type);
+        return subjectMapper.getByType(isParty, theme);
     }
 
 
